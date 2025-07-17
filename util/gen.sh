@@ -12,9 +12,9 @@ do
     pwd
     if [[ $d =~ $OFFSTR ]]
     then
-        $ACMAT act.toml
+        $ACMAT act.toml > dataset.txt
     else
-        $ACGEN act.toml
+        $ACGEN act.toml > dataset.txt
     fi
     cd ..
     tar -czvf $d.tar.gz $d
