@@ -9,6 +9,7 @@ do
     pwd
     ~/Working/devel/ACTest/util/acgen.jl act.toml
     cd ..
+    tar -czvf $d.tar.gz $d
     pwd
     cd ../util
     pwd
