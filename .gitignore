@@ -2,8 +2,8 @@
 *.swp
 .DS_Store
 *.data
+*.txt
+*.gz
 green.*
 image.*
-test.jl
-test.toml
 docs/build
