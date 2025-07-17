@@ -2,9 +2,8 @@
 *.swp
 .DS_Store
 *.data
-Aout.*
-fmesh.inp
-model.inp
+green.*
+image.*
 test.jl
 test.toml
 docs/build
