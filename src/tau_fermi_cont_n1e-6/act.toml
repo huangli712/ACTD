@@ -1,11 +1,7 @@
 #
-# Test: A08
+# dataset: tau_fermi_cont_n1e-6
 #
-# 1. Execute ../../util/acgen.jl act.toml.
-# 2. Change solver = "MaxEnt" and the [Solver] block.
-# 3. Execute ../../util/acflow.jl act.toml.
-# 4. Execute ../../util/acplot.jl act.toml.
-# 5. Change ptype = "random2" and repeat the above steps.
+# code: ACTest v1.2.0-devel.250716
 #
 
 [Test]
