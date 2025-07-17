@@ -2,6 +2,8 @@
 
 dir=`ls ../src`
 
+rm -rf ../src/*.gz
+
 for d in $dir
 do
     echo $d
