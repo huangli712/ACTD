@@ -6,7 +6,7 @@ This dataset is currently under developement. **PLEASE USE IT AT YOUR OWN RISK!*
 
 ## Version
 
-v0.2.0-devel.250717
+v0.9.0-devel.250718
 
 ## License
 
