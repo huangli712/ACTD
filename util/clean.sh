@@ -20,6 +20,7 @@ do
         pwd
         rm -fr green.*
         rm -fr image.*
+        rm -fr dataset.txt
         cd ../../util
     fi
 done
