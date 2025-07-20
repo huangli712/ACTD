@@ -1,8 +1,19 @@
 #!/bin/bash
 
+#
+# This script will try to generate the dataset. To use this script, please
+# make sure:
+#
+# (1) The environment variable ACTEST must be correctly setup.
+#
+# (2) Please execute the clean.sh script to clean the directory at first.
+#
+# (3) Please ensure that your system has enough disk space.
+#
+
 dir=`ls ../src`
-ACGEN=~/Working/devel/ACTest/util/acgen.jl
-ACMAT=~/Working/devel/ACTest/util/acmat.jl
+ACGEN=$ACTEST/util/acgen.jl
+ACMAT=$ACTEST/util/acmat.jl
 OFFSTR="offdiag"
 
 for d in $dir
