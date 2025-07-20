@@ -12,9 +12,14 @@ dir=`ls ../src`
 for d in $dir
 do
     echo $d
-    cd ../src/$d
-    pwd
-    rm -fr green.*
-    rm -fr image.*
-    cd ../../util
+    if test -f ../src/$d
+    then
+        rm -fr ../src/$d
+    else
+        cd ../src/$d
+        pwd
+        rm -fr green.*
+        rm -fr image.*
+        cd ../../util
+    fi
 done
