@@ -4,11 +4,13 @@
 # This script will try to generate the dataset. To use this script, please
 # make sure:
 #
-# (1) The environment variable ACTEST must be correctly setup.
+# (1) Please install and configure the ACTest toolkit correctly.
 #
-# (2) Please execute the clean.sh script to clean the directory at first.
+# (2) The environment variable ACTEST must be correctly setup.
 #
-# (3) Please ensure that your system has enough disk space.
+# (3) Please execute the clean.sh script to clean the directory at first.
+#
+# (4) Please ensure that your system has enough disk space.
 #
 
 dir=`ls ../src`
