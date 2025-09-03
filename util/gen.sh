@@ -12,6 +12,8 @@
 #
 # (4) Please ensure that your system has enough disk space.
 #
+# (5) Please execute this script in the util directory.
+#
 
 dir=`ls ../src`
 ACGEN=$ACTEST/util/acgen.jl
