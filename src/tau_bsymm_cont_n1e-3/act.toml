@@ -1,0 +1,27 @@
+#
+# dataset: tau_bsymm_cont_n1e-3
+#
+# code: ACTest v1.2.0-devel.250716
+#
+
+[Test]
+solver = "MaxEnt"
+ptype  = "random1"
+ktype  = "bsymm"
+grid   = "btime"
+mesh   = "linear"
+ngrid  = 257
+nmesh  = 801
+ntest  = 2000
+nbins  = 100
+wmax   = 8.0
+wmin   = 0.0
+pmax   = 4.0
+pmin   = 0.0
+beta   = 20.0
+noise  = 1.0e-3
+lcorr  = 0.5
+tcorr  = true
+fnpd   = false
+fpbc   = false
+lpeak  = [1,2,3,4,5,6]
