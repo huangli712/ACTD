@@ -18,5 +18,6 @@ makedocs(
         "Method" => "method.md",
         "Datasets" => "data.md",
         "Notes" => "note.md",
+        "Acknowledgements" => "ack.md",
     ],
 )
