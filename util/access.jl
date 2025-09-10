@@ -37,7 +37,7 @@ If type is "matsubara", the returns are:
 * dre -> Error bar for real part of Matsubara Green's function, Δ ReG(iωₙ).
 * dim -> Error bar for imaginary part of Matsubara Green's function, Δ ImG(iωₙ).
 
-They are vectors. The size is given by `size(grid)`.
+They are vectors. The size is given by `ngrid`.
 
 If type is "time", the returns are:
 
