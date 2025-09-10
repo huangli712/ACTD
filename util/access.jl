@@ -45,11 +45,11 @@ If type is "time", the returns are:
 * gt -> Imaginary time Green's function, G(τ).
 * dt -> Error bar for imaginary time Green's function, Δ G(τ).
 
-They are 2d array. The shape is `(ntime, nbins)`.
+They are 2d arrays. The shape is `(ntime, nbins)`.
 
 ### Examples
 
-```html
+```
 dd
 ```
 """
