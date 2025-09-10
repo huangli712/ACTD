@@ -7,8 +7,52 @@
 # Last modified: 2025/09/10
 #
 
+#=
+
+*Remarks* :
+
+In this file, we provide two functions to access the green's functions and
+spectral functions in the ACTD.
+=#
+
 using DelimitedFiles
 
+"""
+    read_green(dir::String, type::String, ind::Int)
+
+Read Matsubara and imaginary time Green's functions in the ACTD.
+
+### Arguments
+* dir -> Directory for the dataset.
+* type -> Type of the Green's function. It could be "matsubara" or "time".
+* ind -> Index for the record.
+
+### Returns
+
+If type is "matsubara", the returns are:
+
+* grid -> Matsubara frequency, ωₙ.
+* gre -> Real part of Matsubara Green's function, ReG(iωₙ).
+* gim -> Imaginary part of Matsubara Green's function, ImG(iωₙ).
+* dre -> Error bar for real part of Matsubara Green's function, Δ ReG(iωₙ).
+* dim -> Error bar for imaginary part of Matsubara Green's function, Δ ImG(iωₙ).
+
+They are vectors. The size is given by `size(grid)`.
+
+If type is "time", the returns are:
+
+* grid -> Imaginary time slice, τ.
+* gt -> Imaginary time Green's function, G(τ).
+* dt -> Error bar for imaginary time Green's function, Δ G(τ).
+
+They are 2d array. The shape is `(ntime, nbins)`.
+
+### Examples
+
+```html
+dd
+```
+"""
 function read_green(dir::String, type::String, ind::Int)
     if type == "matsubara"
         fn = joinpath(dir, "green.data.") * string(ind)
@@ -46,6 +90,17 @@ function read_green(dir::String, type::String, ind::Int)
     end
 end
 
+"""
+    read_image(dir::String, ind::Int)
+
+### Arguments
+### Returns
+### Examples
+
+```julia
+mesh, image = read_image("../src/mat_boson_cont_n1e-3", 10)
+```
+"""
 function read_image(dir::String, ind::Int)
     fn = joinpath(dir, "image.data.") * string(ind)
     if isfile(fn)
@@ -57,12 +112,6 @@ function read_image(dir::String, ind::Int)
     end
 end
 
-#mesh, image = read_image("../src/mat_boson_cont_n1e-3", 10)
 
-grid, gre, gim, dre, dim = read_green("../src/mat_boson_cont_n1e-3/", "matsubara", 100)
-@show dre
 
-#time, green, error = read_green("../src/tau_boson_cont_n1e-3/", "time", 100)
-#@show error[:,1]
-#@show error[:,2]
-#@show error[:,100]
+
