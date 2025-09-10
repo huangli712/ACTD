@@ -49,11 +49,16 @@ They are 2d arrays. The shape is `(ntime, nbins)`.
 
 ### Examples
 
-```
-dd
+```julia
+# Read Matsubara Green's function
+grid, gre, gim, dre, dim = read_green("../src/mat_boson_cont_n1e-3/", "matsubara", 100)
+
+# Read imaginary time Green's function
+time, green, error = read_green("../src/tau_boson_cont_n1e-3/", "time", 100)
 ```
 """
 function read_green(dir::String, type::String, ind::Int)
+    # For Matsubara Green's function
     if type == "matsubara"
         fn = joinpath(dir, "green.data.") * string(ind)
         if isfile(fn)
@@ -66,6 +71,7 @@ function read_green(dir::String, type::String, ind::Int)
         else
             @error "File $fn doesn't exist!"
         end
+    # For imaginary time Green's function
     else
         fn = joinpath(dir, "green.bin.") * string(ind)
         if isfile(fn)
@@ -93,8 +99,18 @@ end
 """
     read_image(dir::String, ind::Int)
 
+Read spectral functions in the ACTD.
+
 ### Arguments
+
+* dir -> Directory for the dataset.
+* ind -> Index for the record.
+
 ### Returns
+
+* mesh -> Mesh in real axis, ω.
+* image -> Spectral function, A(ω).
+
 ### Examples
 
 ```julia
@@ -111,7 +127,3 @@ function read_image(dir::String, ind::Int)
         @error "File $fn doesn't exist!"
     end
 end
-
-
-
-
