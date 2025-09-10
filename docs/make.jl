@@ -14,5 +14,9 @@ makedocs(
     remotes = nothing,
     pages = [
         "Home" => "index.md",
+        "Introduction" => "intro.md",
+        "Method" => "method.md",
+        "Datasets" => "data.md",
+        "Notes" => "note.md",
     ],
 )
