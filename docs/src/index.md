@@ -18,6 +18,7 @@ Pages = [
     "method.md",
     "data.md",
     "note.md",
+    "ack.md",
 ]
 Depth = 1
 ```
