@@ -8,11 +8,11 @@
 #
 
 #=
-
 *Remarks* :
 
 In this file, we provide two functions to access the green's functions and
-spectral functions in the ACTD.
+spectral functions in the ACTD. To use the two functions, please include
+this file in your scipts via the `include` keyword.
 =#
 
 using DelimitedFiles
