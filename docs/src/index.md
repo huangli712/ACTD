@@ -4,21 +4,8 @@
 
 !!! info
 
-    Thank you for using ACTD. This documentation will help you to be familiar with and explore the ACTD dataset. It is just compatible with ACTD v0.9.3-devel.250910.
+    Thank you for using ACTD. This documentation will help you to be familiar with and explore the ACTD dataset. It is just compatible with ACTD v0.9.4-devel.250925.
 
 !!! warning
 
     The ACTD dataset is in heavy development. Please use it at your own risk. If you encounter any bugs or troubles, or require new features, please consult me directly: **huangli at caep.cn**
-
-## Contents
-
-```@contents
-Pages = [
-    "intro.md",
-    "method.md",
-    "data.md",
-    "note.md",
-    "ack.md",
-]
-Depth = 1
-```
