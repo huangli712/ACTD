@@ -15,7 +15,7 @@
 # (5) Please execute this script in the util directory.
 #
 
-# Working directory
+# A collection of working directories
 dir=`ls ../src`
 
 # Scripts for generating the dataset
@@ -28,29 +28,42 @@ OFFSTR="offdiag"
 for d in $dir
 do
     echo $d
+
+    # If it is a file, then we check next item.
     if test -f ../src/$d
     then
         continue
     else
+        # Enter the working folder
         cd ../src/$d
         pwd
     fi
 
+    # We use run.txt to control whether the current folder is used.
     if test -f run.txt
     then
         cd ../../util
         continue
     else
+        # Mark the current folder is used
         touch run.txt
+
+        # Extract random number seed
         myseed=`cat seed`
+
+        # Generate dataset
         if [[ $d =~ $OFFSTR ]]
         then
             $ACMAT act.toml $myseed > dataset.txt
         else
             $ACGEN act.toml $myseed > dataset.txt
         fi
+
+        # Compress dataset
         cd ..
         tar -czvf $d.tar.gz $d
+
+        # Return the parent directory
         cd ../util
     fi
 done
