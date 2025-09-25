@@ -22,6 +22,7 @@ do
         rm -fr green.*
         rm -fr image.*
         rm -fr dataset.txt
+        rm -fr run.txt
         cd ../../util
     fi
 done

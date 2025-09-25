@@ -30,14 +30,22 @@ do
     echo $d
     cd ../src/$d
     pwd
-    myseed=`cat seed`
-    if [[ $d =~ $OFFSTR ]]
+
+    if test -f run.txt
     then
-        $ACMAT act.toml $myseed > dataset.txt
+        cd ../../util
+        continue
     else
-        $ACGEN act.toml $myseed > dataset.txt
+        touch run.txt
+        myseed=`cat seed`
+        if [[ $d =~ $OFFSTR ]]
+        then
+            $ACMAT act.toml $myseed > dataset.txt
+        else
+            $ACGEN act.toml $myseed > dataset.txt
+        fi
+        cd ..
+        tar -czvf $d.tar.gz $d
+        cd ../util
     fi
-    cd ..
-    tar -czvf $d.tar.gz $d
-    cd ../util
 done
