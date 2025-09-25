@@ -4,7 +4,7 @@
 # This script will clean the src directory, removing all the green.* and
 # image.* files. You have to execute it in the util directory.
 #
-# This script is extremely dangerous. please use it at your own risk! We
+# This script is extremely dangerous. Please use it at your own risk! We
 # strongly suggest you to remove the useless files manually.
 #
 
