@@ -28,8 +28,13 @@ OFFSTR="offdiag"
 for d in $dir
 do
     echo $d
-    cd ../src/$d
-    pwd
+    if test -f ../src/$d
+    then
+        continue
+    else
+        cd ../src/$d
+        pwd
+    fi
 
     if test -f run.txt
     then
