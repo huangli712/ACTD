@@ -4,7 +4,7 @@
 
 !!! info
 
-    Thank you for using ACTD. This documentation will help you to be familiar with and explore the ACTD dataset. It is just compatible with ACTD v0.9.4-devel.250925.
+    Thank you for using ACTD. This documentation will help you to be familiar with and explore the ACTD dataset. It is just compatible with ACTD v0.9.5-devel.250928.
 
 !!! warning
 
