@@ -78,7 +78,7 @@ function read_green(dir::String, type::String, ind::Int)
             # Read the green's functions
             dlm = readdlm(fn, comments = true)
 
-            # Determine number of data bins and number of time slices 
+            # Determine number of data bins and number of time slices
             nline1 = countlines(fn)
             nline2, = size(dlm)
             nbins = (nline1 - nline2) ÷ 3
