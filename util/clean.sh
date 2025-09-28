@@ -13,9 +13,13 @@ dir=`ls ../src`
 for d in $dir
 do
     echo $d
+
+    # It is a file, perhaps *.tar.gz, simplicitly delete it.
     if test -f ../src/$d
     then
         rm -fr ../src/$d
+    
+    # It is a folder, clean it.
     else
         cd ../src/$d
         pwd
