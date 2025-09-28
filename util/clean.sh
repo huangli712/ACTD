@@ -18,8 +18,8 @@ do
     if test -f ../src/$d
     then
         rm -fr ../src/$d
-    
-    # It is a folder, clean it.
+
+    # It is a folder, just clean it.
     else
         cd ../src/$d
         pwd
