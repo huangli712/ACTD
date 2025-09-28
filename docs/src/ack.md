@@ -1,5 +1,3 @@
-# Acknowledgements
-
 This project has been supported by the following fundings:
 
 * National Science Foundation of China (under Grant No. T2525034, 2026-2030)
